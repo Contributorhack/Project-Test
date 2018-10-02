@@ -1,0 +1,9 @@
+function partialSort(array,start,end)
+{
+var presorted=array.slice(0,start);
+var postsorted=array.slice(end);
+var sorted=array.slice(start,end).sort(compID);
+array.length=0;
+array.push.apply(array,presorted.concat(sorted).concat(postsorted));
+return array
+}
